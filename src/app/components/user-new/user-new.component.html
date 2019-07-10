@@ -5,7 +5,7 @@
     </div>
     <form class="form-horizontal" #form="ngForm" (ngSubmit)="register()" novalidate>
       <div [ngClass]='classCss' role="alert" *ngIf="message">
-        <strong>{{ message }}</strong>
+        <strong>{{ message.text }}</strong>
       </div>
       <div class="box-body">
         <div [ngClass]="getFromGroupClass(email.invalid, email.dirty)">
@@ -59,7 +59,7 @@
           </div>
         </div>
       <div class="box-footer">
-        <button type="submit" [disabled]="!form.valid" class="btn btn-info pull-right">Login</button>
+        <button type="submit" [disabled]="!form.valid" class="btn btn-info pull-right">Submit</button>
       </div>
     </form>
   </div>

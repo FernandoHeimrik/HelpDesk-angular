@@ -53,7 +53,7 @@ export class UserNewComponent implements OnInit {
       let userRet : User = responseApi.data;
       this.form.resetForm();
       this.showMessage({
-        type: 'sucess',
+        type: 'success',
         text:`Registered ${userRet.email} sucessfully`
       });
     }, err =>{
@@ -64,7 +64,7 @@ export class UserNewComponent implements OnInit {
     });
   }
 
-  private showMessage(message:{type: string, text: string}) : void{
+  private showMessage(message: {type: string, text: string}) : void{
     this.message = message;
     this.buildClasses(message.type);
     setTimeout(() => {
@@ -76,7 +76,7 @@ export class UserNewComponent implements OnInit {
     this.classCss = {
       'alert' : true
     }
-    this.classCss['alert'+type] = true
+    this.classCss['alert-'+type] = true;
   }
 
   getFromGroupClass(isInvalid: boolean, isDirty): {}{
