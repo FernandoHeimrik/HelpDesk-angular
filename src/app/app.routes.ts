@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { TicketNewComponent } from './components/ticket-new/ticket-new.component';
+import { SummaryComponent } from './components/summary/summary.component';
 
 export const ROUTES: Routes = [
      {path: '', component : HomeComponent, canActivate: [AuthGuard]},
@@ -18,7 +19,8 @@ export const ROUTES: Routes = [
      {path: 'ticket-list', component : TicketListComponent, canActivate: [AuthGuard]},
      {path: 'ticket-new', component : TicketNewComponent, canActivate: [AuthGuard]},
      {path: 'ticket-new/:id', component : TicketNewComponent, canActivate: [AuthGuard]},
-     {path: 'ticket-detail/:id', component : TicketDetailComponent, canActivate: [AuthGuard]}
+     {path: 'ticket-detail/:id', component : TicketDetailComponent, canActivate: [AuthGuard]},
+     {path: 'summary', component : SummaryComponent, canActivate: [AuthGuard]}
 ]
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(ROUTES);

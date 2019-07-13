@@ -22,6 +22,7 @@ import { TicketNewComponent } from './components/ticket-new/ticket-new.component
 import { TicketService } from './services/ticket.service';
 import { TicketListComponent } from './components/ticket-list/ticket-list.component';
 import { TicketDetailComponent } from './components/ticket-detail/ticket-detail.component';
+import { SummaryComponent } from './components/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TicketDetailComponent } from './components/ticket-detail/ticket-detail.
     UserListComponent,
     TicketNewComponent,
     TicketListComponent,
-    TicketDetailComponent
+    TicketDetailComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
